@@ -14,11 +14,15 @@
 #     return(len(s))
 
 
-temp = []
-chr = "[{10 + (90))]"
+gerbang = []
+chr = "[()]"
 kurung_buka = ["(", "{", "["]
 kurung_tutup = [")", "}", "]"]
 for char in chr:
     if char in kurung_buka:
-        temp.append(char)
-print(temp)
+        gerbang.append(char)
+    elif char in kurung_tutup:
+        antri = char
+        s = gerbang.pop()
+        print(s)
+print(gerbang)
